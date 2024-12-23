@@ -1,0 +1,10 @@
+.nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+    font-weight: bold; 
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+  }
