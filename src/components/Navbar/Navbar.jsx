@@ -43,12 +43,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav
-      className="navbar navbar-expand-lg bg-body-tertiary fixed-top w-100"
-      style={{
-        borderRadius: '35px',
-        boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.1)'
-      }}>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-navbar">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
@@ -74,13 +69,7 @@ export const Navbar = () => {
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent">
-          <ul
-            className="navbar-nav mb-2 mb-lg-0"
-            style={{
-              gap: '50px',
-              display: 'flex',
-              marginLeft: '150px'
-            }}>
+          <ul className="navbar-nav custom-nav-list">
             {navLinks.map((link, index) => (
               <li
                 key={index}
