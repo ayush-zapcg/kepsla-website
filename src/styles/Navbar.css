@@ -1,0 +1,29 @@
+.nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+    font-weight: bold; 
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+  }
+.custom-navbar {
+    border-radius: 35px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-nav-list {
+    gap: 50px;
+    display: flex;
+    margin-left: 150px;
+  }
+  
+  .dropdown-menu {
+    padding: 0.5rem 1rem;
+  }
+  
+  .dropdown-divider {
+    margin: 0.5rem 0;
+  }
+  
