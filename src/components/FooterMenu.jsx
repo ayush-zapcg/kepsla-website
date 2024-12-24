@@ -8,6 +8,39 @@ import {
 import footerlogo from '../assets/footerlogo.png';
 
 function FooterMenu() {
+  const addresses = [
+    {
+      city: 'DUBLIN, CA',
+      address: '7033 Village Parkway, Ste.211 Dublin, CA 94568'
+    },
+    {
+      city: 'DALLAS, TX',
+      address: '105 Decker Court, Ste. 810 Irving, TX 75062'
+    },
+    {
+      city: 'BANGALORE, IN',
+      address:
+        '9th floor, Gamma Tower, Sigma Soft tech park, Whitefield, Bangalore, Karnataka 560066'
+    }
+  ];
+  const socialLinks = [
+    {
+      href: 'https://facebook.com',
+      icon: <FaFacebook />
+    },
+    {
+      href: 'https://pinterest.com',
+      icon: <FaPinterest />
+    },
+    {
+      href: 'https://instagram.com',
+      icon: <FaInstagram />
+    },
+    {
+      href: 'https://twitter.com',
+      icon: <FaTwitter />
+    }
+  ];
   return (
     <Navbar
       expand="lg"
@@ -19,109 +52,71 @@ function FooterMenu() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        gap: '3rem'
+        gap: '5rem'
       }}>
       {/* Left side: Logo/Image */}
-      <div style={{ width: '20%' }}>
+      <div style={{ width: '30%' }}>
         <Navbar.Brand href="#">
-          <img
-            src={footerlogo} // Replace with your image URL
-            alt="Logo"
-            style={{ width: '100%' }}
-          />
+          <img src={footerlogo} alt="Logo" style={{ width: '100%' }} />
         </Navbar.Brand>
       </div>
 
-      {/* Right side: Links, Text and Icons */}
+      {/* Right side: Links, Text */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          width: '80%'
+          width: '80%',
+          gap: '4rem'
         }}>
-        {/* Top-right: Text */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'flex-start'
+            alignItems: 'flex-start',
+            gap: '10rem',
+            justifyContent: 'start'
           }}>
-          <div style={{ marginBottom: '10px' }}>
-            <Navbar.Text style={{ color: '#ffffff' }}>
-              <p
-                style={{
-                  marginBottom: '0',
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  fontFamily: 'Open Sans'
-                }}>
-                DUBLIN, CA
-              </p>
-              <span
-                style={{
-                  fontSize: '16px',
-                  fontWeight: '400',
-                  fontFamily: 'Poppins'
-                }}>
-                7033 Village Parkway, Ste.211 Dublin, CA 94568
-              </span>
-            </Navbar.Text>
-          </div>
-          <div style={{ marginBottom: '10px' }}>
-            <Navbar.Text style={{ color: '#ffffff' }}>
-              <p
-                style={{
-                  marginBottom: '0',
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  fontFamily: 'Open Sans'
-                }}>
-                DALLAS, TX
-              </p>
-              <span
-                style={{
-                  fontSize: '16px',
-                  fontWeight: '400',
-                  fontFamily: 'Poppins'
-                }}>
-                105 Decker Court, Ste. 810 Irving, TX 75062
-              </span>
-            </Navbar.Text>
-          </div>
-          <div style={{ marginBottom: '10px' }}>
-            <Navbar.Text style={{ color: '#ffffff' }}>
-              <p
-                style={{
-                  marginBottom: '0',
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  fontFamily: 'Open Sans'
-                }}>
-                BANGALORE, IN
-              </p>
-              <span
-                style={{
-                  fontSize: '16px',
-                  fontWeight: '400',
-                  fontFamily: 'Poppins'
-                }}>
-                9th floor, Gamma Tower, Sigma Soft tech park, Whitefield,
-                Bangalore, Karnataka 560066
-              </span>
-            </Navbar.Text>
-          </div>
+          {addresses.map((address, index) => (
+            <div
+              key={index}
+              style={{
+                marginBottom: '10px',
+                maxWidth: '15rem',
+                textAlign: 'start'
+              }}>
+              <Navbar.Text style={{ color: '#ffffff' }}>
+                <p
+                  style={{
+                    marginBottom: '0',
+                    fontSize: '24px',
+                    fontWeight: '700',
+                    fontFamily: 'Open Sans'
+                  }}>
+                  {address.city}
+                </p>
+                <span
+                  style={{
+                    fontSize: '16px',
+                    fontWeight: '400',
+                    fontFamily: 'Poppins'
+                  }}>
+                  {address.address}
+                </span>
+              </Navbar.Text>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom-right: Social Media Icons */}
         <div
           style={{
             marginBottom: '0',
             fontSize: '24px',
             fontWeight: '700',
             display: 'flex',
-            gap: '10rem'
+            justifyContent: 'space-between'
           }}>
-          <div style={{ display: 'flex', gap: '10px', color: '#ffffff' }}>
+          <div style={{ display: 'flex', gap: '13px', color: '#ffffff' }}>
             <p
               style={{
                 marginBottom: '0',
@@ -131,18 +126,12 @@ function FooterMenu() {
               }}>
               Follow us on
             </p>
-            <Nav.Link href="https://facebook.com" target="_blank">
-              <FaFacebook style={{ color: '#fff' }} />
-            </Nav.Link>
-            <Nav.Link href="https://pinterest.com" target="_blank">
-              <FaPinterest style={{ color: '#fff' }} />
-            </Nav.Link>
-            <Nav.Link href="https://instagram.com" target="_blank">
-              <FaInstagram style={{ color: '#fff' }} />
-            </Nav.Link>
-            <Nav.Link href="https://twitter.com" target="_blank">
-              <FaTwitter style={{ color: '#fff' }} />
-            </Nav.Link>
+
+            {socialLinks.map((social, index) => (
+              <Nav.Link key={index} href={social.href} target="_blank">
+                {social.icon}
+              </Nav.Link>
+            ))}
           </div>
           <div
             style={{
