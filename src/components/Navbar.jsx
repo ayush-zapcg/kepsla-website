@@ -1,4 +1,4 @@
-import '../styles/Navbar.css';
+import styles from '../styles/Navbar.module.css';
 
 export const Navbar = () => {
   const navLinks = [
@@ -43,7 +43,8 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-navbar">
+    <nav
+      className={`navbar navbar-expand-lg bg-body-tertiary fixed-top ${styles.customNavbar}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
@@ -69,28 +70,36 @@ export const Navbar = () => {
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent">
-          <ul className="navbar-nav custom-nav-list">
+          <ul className={`navbar-nav ${styles.customNavList}`}>
             {navLinks.map((link, index) => (
               <li
                 key={index}
                 className={`nav-item ${link.isDropdown ? 'dropdown' : ''}`}>
                 {!link.isDropdown ? (
                   <a
-                    className={`nav-link ${link.name === 'Home' ? 'active' : ''}`}
+                    className={`nav-link ${
+                      link.name === 'Home'
+                        ? styles.navLinkActive
+                        : styles.navLink
+                    }`}
                     href={link.href}>
                     {link.name}
                   </a>
                 ) : (
                   <>
                     <a
-                      className="nav-link dropdown-toggle"
+                      className={`nav-link dropdown-toggle ${
+                        link.name === 'Home'
+                          ? styles.navLinkActive
+                          : styles.navLink
+                      }`}
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false">
                       {link.name}
                     </a>
-                    <ul className="dropdown-menu">
+                    <ul className={`dropdown-menu ${styles.dropdownMenu}`}>
                       {link.dropdownItems.map((item, idx) => (
                         <li key={idx}>
                           <a className="dropdown-item" href={item.href}>
@@ -99,7 +108,9 @@ export const Navbar = () => {
                         </li>
                       ))}
                       <li>
-                        <hr className="dropdown-divider" />
+                        <hr
+                          className={`dropdown-divider ${styles.dropdownDivider}`}
+                        />
                       </li>
                     </ul>
                   </>
