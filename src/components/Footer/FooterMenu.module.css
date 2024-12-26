@@ -1,0 +1,44 @@
+.footerMenuContaniner {
+  padding: 20px 10px;
+  background-color: #263959;
+}
+.width30 {
+  width: 30%;
+}
+.width100 {
+  width: 100%;
+}
+
+.addressContent {
+  margin-bottom: 4rem;
+  max-width: 15rem;
+}
+.whiteText {
+  color: #ffffff;
+}
+.addressHeading {
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+}
+.addressPara {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+.bottomContent {
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.bottomText {
+  gap: 13px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+.textUnderline {
+  text-decoration: underline;
+}
