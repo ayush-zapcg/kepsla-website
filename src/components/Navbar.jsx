@@ -1,45 +1,53 @@
+import { useLocation } from 'react-router-dom';
 import styles from '../styles/Navbar.module.css';
 
 export const Navbar = () => {
+  const location = useLocation();
+
   const navLinks = [
-    { name: 'Home', href: '#', isDropdown: false },
+    { name: 'Home', href: '/', isDropdown: false },
     {
       name: 'Products',
       isDropdown: true,
       dropdownItems: [
-        { name: 'Action', href: '#' },
-        { name: 'Another action', href: '#' },
-        { name: 'Something else here', href: '#' }
+        { name: 'Review Intelligence', href: '/review-intelligence' },
+        { name: 'Feedback Management', href: '/feedback-management' },
+        {
+          name: 'Service Enhancement System',
+          href: '/service-enhancement-system'
+        },
+        { name: 'Voice of Employee', href: '/voice-of-employee' }
       ]
     },
     {
       name: 'About',
       isDropdown: true,
       dropdownItems: [
-        { name: 'Action', href: '#' },
-        { name: 'Another action', href: '#' },
-        { name: 'Something else here', href: '#' }
+        { name: 'Our Team', href: '/our-team' },
+        { name: 'Our Clients', href: '/our-clients' },
+        {
+          name: 'Recognitions and Partnerships',
+          href: '/recognitions-and-partnerships'
+        }
       ]
     },
     {
       name: 'Resources',
       isDropdown: true,
-      dropdownItems: [
-        { name: 'Action', href: '#' },
-        { name: 'Another action', href: '#' },
-        { name: 'Something else here', href: '#' }
-      ]
+      dropdownItems: [{ name: 'Case Studies', href: '/case-studies' }]
     },
     {
       name: 'Login',
       isDropdown: true,
       dropdownItems: [
-        { name: 'Action', href: '#' },
-        { name: 'Another action', href: '#' },
-        { name: 'Something else here', href: '#' }
+        { name: 'Review Intelligence', href: 'https://reviews.kepsla.com/' },
+        {
+          name: 'Feedback Management System',
+          href: 'https://feedback.kepsla.com'
+        }
       ]
     },
-    { name: 'Contact us', href: '/#', isDropdown: false }
+    { name: 'Contact us', href: '/contact-us', isDropdown: false }
   ];
 
   return (
@@ -78,7 +86,7 @@ export const Navbar = () => {
                 {!link.isDropdown ? (
                   <a
                     className={`nav-link ${
-                      link.name === 'Home'
+                      location.pathname === link.href
                         ? styles.navLinkActive
                         : styles.navLink
                     }`}
@@ -89,7 +97,9 @@ export const Navbar = () => {
                   <>
                     <a
                       className={`nav-link dropdown-toggle ${
-                        link.name === 'Home'
+                        link.dropdownItems.some((item) =>
+                          location.pathname.startsWith(item.href)
+                        )
                           ? styles.navLinkActive
                           : styles.navLink
                       }`}
@@ -102,7 +112,18 @@ export const Navbar = () => {
                     <ul className={`dropdown-menu ${styles.dropdownMenu}`}>
                       {link.dropdownItems.map((item, idx) => (
                         <li key={idx}>
-                          <a className="dropdown-item" href={item.href}>
+                          <a
+                            className="dropdown-item"
+                            href={item.href}
+                            target={
+                              link.name === 'Login' ? '_blank' : '_self'
+                            }
+                            rel={
+                              link.name === 'Login'
+                                ? 'noopener noreferrer'
+                                : undefined
+                            }
+                          >
                             {item.name}
                           </a>
                         </li>
