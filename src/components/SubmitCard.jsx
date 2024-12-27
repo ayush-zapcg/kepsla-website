@@ -9,11 +9,11 @@ const SubmitCard = () => {
         src="src/assets/envelope-icon.svg"
         alt="envelope-icon"
       />
-      <div className={`${styles.submitText}`}>
+      <div className={`poppins-400 ${styles.submitText}`}>
         Thank you for submitting! We will get back to you as soon as possible.
       </div>
       <Link to="/" className={`${styles.linkWrapper}`}>
-        <button className={`btn btn-primary ${styles.bgBlueBack}`} type="button">
+        <button className={`poppins-600 btn btn-primary ${styles.bgBlueBack}`} type="button">
           Back
         </button>
       </Link>

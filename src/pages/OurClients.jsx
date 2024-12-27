@@ -115,8 +115,8 @@ const OurClients = () => {
   return (
     <div className={`${styles.clientContainer}`}>
       <div className={`${styles.headingText}`}>
-        <h1 className={`${styles.title}`}>Our Clients</h1>
-        <h3 className={`${styles.subtitle}`}>
+        <h1 className={`open-sans-700 ${styles.title}`}>Our Clients</h1>
+        <h3 className={`poppins-500 ${styles.subtitle}`}>
           Here are a few of our over 4000 clients in over 51 countries who use
           our hotel technology solutions.
         </h3>

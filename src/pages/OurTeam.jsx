@@ -130,10 +130,10 @@ const OurTeam = () => {
     <div className={`${styles.teamContainer}`}>
       <div className={`${styles.aboutContainer}`}>
         <div className={`${styles.aboutText}`}>
-          <h1 className={`${styles.title}`}>
+          <h1 className={`open-sans-700 ${styles.title}`}>
             About <br /> us
           </h1>
-          <h3 className={`${styles.subtitle}`}>
+          <h3 className={`poppins-400 ${styles.subtitle}`}>
             At KePSLA we are focused on organizing the big data on travel search
             using artificial intelligence and machine learning to make the
             experience for travelers, hoteliers, and travel companies more
@@ -152,10 +152,12 @@ const OurTeam = () => {
       </div>
 
       <div className={`${styles.teamsContainer}`}>
-        <h3 className={`${styles.ourTeamText}`}>Our Team</h3>
+        <h3 className={`open-sans-700 ${styles.ourTeamText}`}>Our Team</h3>
         {teams.map((team, index) => (
           <div className={`${styles.subTeams}`} key={index}>
-            <h2 className={`${styles.teamTitle}`}>{team.title}</h2>
+            <h2 className={`open-sans-600 ${styles.teamTitle}`}>
+              {team.title}
+            </h2>
             <div className={`${styles.teamMembers}`}>
               {team.members.map((member, index) => (
                 <div className={`${styles.memberContainer}`} key={index}>
@@ -164,7 +166,7 @@ const OurTeam = () => {
                     src={member.image}
                     alt={member.name}
                   />
-                  <h3 className={`${styles.memberName}`}>
+                  <h3 className={`open-sans-700 ${styles.memberName}`}>
                     {member.name}{' '}
                     {member.contact && (
                       <a
@@ -175,7 +177,7 @@ const OurTeam = () => {
                       </a>
                     )}
                   </h3>
-                  <h4 className={`${styles.memberDesignation}`}>
+                  <h4 className={`open-sans-400 ${styles.memberDesignation}`}>
                     {member.designation}
                   </h4>
                 </div>

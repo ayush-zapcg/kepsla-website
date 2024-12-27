@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SubmitCard from '../components/SubmitCard';
 import styles from '../styles/Contact.module.css';
+import '../fonts.css';
 
 const Contact = () => {
   const locations = [
@@ -30,13 +31,13 @@ const Contact = () => {
   return (
     <div className={`${styles.contactContainer}`}>
       <div className={`${styles.headingText}`}>
-        <h1 className={`${styles.title}`}>Get in Touch</h1>
-        <h3 className={`${styles.subtitle}`}>
+        <h1 className={`open-sans-700 ${styles.title}`}>Get in Touch</h1>
+        <h3 className={`poppins-500 ${styles.subtitle}`}>
           Add your details, We will get back to you!
         </h3>
       </div>
       <div className={`${styles.mainContainer}`}>
-        <div className={`${styles.contactInfo}`}>
+        <div className={`open-sans-500 ${styles.contactInfo}`}>
           <div className={`${styles.mainText}`}>
             To contact us regarding our Hotel Technology Solutions, such as
             guest feedback solutions, social listening tools, deep guest
@@ -44,7 +45,11 @@ const Contact = () => {
             watch, write to
           </div>
           <div className={`${styles.mail}`}>
-            <img className={`${styles.mailIcon}`} src="src\assets\contact-mail-icon.svg" alt="mail-icon"/>
+            <img
+              className={`${styles.mailIcon}`}
+              src="src\assets\contact-mail-icon.svg"
+              alt="mail-icon"
+            />
             <a
               className={`${styles.mailLink}`}
               href="mailto:successwith@kepsla.com">
@@ -61,13 +66,17 @@ const Contact = () => {
                 />
                 <div className={`${styles.locationText}`}>
                   <div className={`${styles.locTitle}`}>{location.city}</div>
-                  <div className={`${styles.locAdd}`}>{location.address}</div>
+                  <div className={`poppins-400 ${styles.locAdd}`}>
+                    {location.address}
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
         </div>
-        <form className={`${styles.contactForm}`} onSubmit={handleSubmit}>
+        <form
+          className={`poppins-500 ${styles.contactForm}`}
+          onSubmit={handleSubmit}>
           <div className={`${styles.formRow}`}>
             <div className={`${styles.formGroup}`}>
               <label htmlFor="name">Name</label>
@@ -92,7 +101,7 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea id="message" required></textarea>
           </div>
-          <button className={`btn btn-primary ${styles.bgBlue}`} type="submit">
+          <button className={`poppins-600 btn btn-primary ${styles.bgBlue}`} type="submit">
             Submit
           </button>
         </form>
