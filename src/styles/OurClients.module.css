@@ -43,7 +43,8 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  padding: 20px 28px;
+  padding: 4rem;
+  background-color: white;
 }
 .logoContainer {
   display: flex;
