@@ -52,11 +52,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg bg-body-tertiary fixed-top ${styles.customNavbar}`}>
+      className={`navbar navbar-expand-lg bg-body-tertiary ${styles.customNavbar}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className={`navbar-brand ${styles.navbarBrand}`} href="/">
           <img
-            src="src/assets/Logo.png"
+            src="src/assets/logo-kepsla.svg"
             alt="Logo"
             width="30"
             height="24"

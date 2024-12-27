@@ -23,6 +23,9 @@
   width: 98%;
   margin: 1rem auto 0;
 }
+.navbarBrand{
+  padding-left: 1rem;
+}
 
 .customNavList {
   gap: 50px;
