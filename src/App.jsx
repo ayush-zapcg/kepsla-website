@@ -3,6 +3,7 @@ import {Navbar} from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import OurClients from './pages/OurClients';
+import OurTeam from './pages/OurTeam';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/our-clients" element={<OurClients />} />
+        <Route path="/our-team" element={<OurTeam />} />
       </Routes>
     </BrowserRouter>
   );
