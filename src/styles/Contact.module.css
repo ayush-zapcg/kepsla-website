@@ -44,6 +44,8 @@
   align-self: center;
   padding: 20px 28px;
   gap: 36px;
+  background-color: #ffffff;
+
 }
 .contactInfo {
   position: relative;
