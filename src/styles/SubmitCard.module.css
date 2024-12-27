@@ -1,0 +1,53 @@
+.submitCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: max-content;
+  border-radius: 24px;
+  box-shadow: 2px 2px 2px 2px rgba(63, 33, 2, 0.1);
+  padding: 2rem 0;
+  background-color: #ffffff;
+}
+
+.envelopeIcon {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 2rem;
+}
+
+.submitText {
+  font-weight: 600;
+  color: #202020;
+  font-size: 16px;
+  width: 60%;
+  text-align: center;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.bgBlueBack {
+  background-color: #263959;
+  border-radius: 6px;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.12);
+  border-color: #263959;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.bgBlueBack:hover {
+  background-color: #1d2f47;
+}
+
+.linkWrapper {
+  text-decoration: none;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
