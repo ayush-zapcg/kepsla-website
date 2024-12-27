@@ -1,9 +1,9 @@
 .navLinkActive {
   text-decoration: underline;
-  text-underline-offset: 4px; 
+  text-underline-offset: 4px;
   font-weight: bold;
-  text-decoration-color: #FF6816; 
-  color: #263959
+  text-decoration-color: #ff6816;
+  color: #263959;
 }
 
 .navLink {
@@ -14,22 +14,25 @@
 .navLink:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-  text-decoration-color: #000; 
+  text-decoration-color: #000;
 }
 
 .customNavbar {
   border-radius: 35px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 98%;
+  margin: 1rem auto 0;
 }
 
 .customNavList {
   gap: 50px;
   display: flex;
-  margin-left: 150px;
+  margin-right: 1rem;
 }
 
 .dropdownMenu {
   padding: 0.5rem 1rem;
+  transform: translateX(-20%);
 }
 
 .dropdownDivider {
