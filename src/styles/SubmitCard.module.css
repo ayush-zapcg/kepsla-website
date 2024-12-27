@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.Submit-Card {
+.submitCard {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,12 +9,14 @@
   padding: 2rem 0;
   background-color: #ffffff;
 }
-.envelope-icon {
+
+.envelopeIcon {
   width: 8rem;
   height: 8rem;
   margin-right: 2rem;
 }
-.submit-text {
+
+.submitText {
   font-weight: 600;
   color: #202020;
   font-size: 16px;
@@ -27,22 +24,30 @@
   text-align: center;
   margin: 0.5rem 0 1.5rem;
 }
-.bg-blue-back {
+
+.bgBlueBack {
   background-color: #263959;
   border-radius: 6px;
   box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.12);
   border-color: #263959;
   color: #ffffff;
-  width: 30%;
-  align-self: center;
-}
-.link-text {
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  border: none;
 }
-.link-text:hover {
-  color: #ffffff;
+
+.bgBlueBack:hover {
+  background-color: #1d2f47;
+}
+
+.linkWrapper {
+  text-decoration: none;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

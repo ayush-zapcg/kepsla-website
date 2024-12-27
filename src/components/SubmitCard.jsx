@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
-import '../styles/SubmitCard.css';
+import styles from '../styles/SubmitCard.module.css';
 
 const SubmitCard = () => {
   return (
-    <div className="Submit-Card">
+    <div className={`${styles.submitCard}`}>
       <img
-        className="envelope-icon"
-        src="src\assets\envelope-icon.svg"
+        className={`${styles.envelopeIcon}`}
+        src="src/assets/envelope-icon.svg"
         alt="envelope-icon"
       />
-      <div className="submit-text">
+      <div className={`${styles.submitText}`}>
         Thank you for submitting! We will get back to you as soon as possible.
       </div>
-      <button className="btn btn-primary bg-blue-back" type="back">
-        <Link to="/" className="link-text">
+      <Link to="/" className={`${styles.linkWrapper}`}>
+        <button className={`btn btn-primary ${styles.bgBlueBack}`} type="button">
           Back
-        </Link>
-      </button>
+        </button>
+      </Link>
     </div>
   );
 };
