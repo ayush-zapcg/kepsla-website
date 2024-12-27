@@ -28,7 +28,7 @@ const Contact = () => {
     setShowSubmitCard(true);
   };
   return (
-    <div className={`${styles.contact}`}>
+    <div className={`${styles.contactContainer}`}>
       <div className={`${styles.headingText}`}>
         <h1 className={`${styles.title}`}>Get in Touch</h1>
         <h3 className={`${styles.subtitle}`}>
@@ -44,7 +44,7 @@ const Contact = () => {
             watch, write to
           </div>
           <div className={`${styles.mail}`}>
-            <img src="src\assets\contact-mail-icon.svg" alt="mail-icon"></img>
+            <img className={`${styles.mailIcon}`} src="src\assets\contact-mail-icon.svg" alt="mail-icon"/>
             <a
               className={`${styles.mailLink}`}
               href="mailto:successwith@kepsla.com">
