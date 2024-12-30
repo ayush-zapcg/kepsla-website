@@ -1,8 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import FooterMenu from './components/Footer/FooterMenu';
+import OurClients from './pages/OurClients';
+import OurTeam from './pages/OurTeam';
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/our-clients" element={<OurClients />} />
+        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <FooterMenu />
     </BrowserRouter>
