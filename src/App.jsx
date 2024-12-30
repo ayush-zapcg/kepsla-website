@@ -1,23 +1,23 @@
-import { Card } from './components/Card';
-import { CardImage } from './components/CardImage';
-import { ClientCarousel } from './components/ClientCarousel';
-import { KeplsaPromise } from './components/KepslaPromise';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import OurClients from './pages/OurClients';
+import OurTeam from './pages/OurTeam';
 import { Testimonials } from './components/Testimonials';
 
 function App() {
   return (
-    <div id="root">
+    <BrowserRouter>
       <Navbar />
-      <Card />
-      <KeplsaPromise />
-      <p>Who we are</p>
-      <CardImage />
-      <p>Our clientele</p>
-      <ClientCarousel />
-      Client Testimonials <br></br>Here some awesome feedback from our Clients
-      <Testimonials />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/our-clients" element={<OurClients />} />
+        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
