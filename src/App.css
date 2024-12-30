@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack Navbar and Card vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  text-align: center; /* Ensure text is centered */
+  padding: 1rem; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in height/width calculations */
+  border: 5px solid red; /* Corrected syntax */
 }
 
 .logo {
@@ -11,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -35,6 +43,10 @@
 
 .card {
   padding: 2em;
+  display: flex; /* Center content inside card */
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 }
 
 .read-the-docs {

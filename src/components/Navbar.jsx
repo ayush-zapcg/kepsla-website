@@ -44,7 +44,8 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg bg-body-tertiary fixed-top ${styles.customNavbar}`}>
+      className={`navbar navbar-expand-lg bg-body-tertiary fixed-top ${styles.customNavbar}`}
+      style={{ width: '100%' }}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
