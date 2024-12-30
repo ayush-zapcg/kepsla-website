@@ -47,6 +47,13 @@ export const Testimonials = () => {
       name: 'Jane Smith',
       position: 'Tech Solutions',
       img: 'src/assets/WWA1.png'
+    },
+    {
+      text: 'Yet another satisfied client sharing their thoughts and experiences.',
+      subtext: 'This part contains further context or expansion.',
+      name: 'Jane Smith',
+      position: 'Tech Solutions',
+      img: 'src/assets/WWA1.png'
     }
   ];
 
@@ -61,27 +68,33 @@ export const Testimonials = () => {
   const testimonialChunks = chunkArray(testimonials, 3);
 
   return (
-    <div className="carousel-container">
+    <div className="container-fluid mt-4">
       <div
         id="carouselExampleTestimonials"
         className="carousel slide"
-        data-bs-ride="carousel">
+        data-bs-ride="carousel"
+        style={{ width: '100%' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'start'
+          }}>
+          Client Testimonials <br></br>Here some awesome feedback from our
+          Clients
+        </div>
         <div className="carousel-inner">
           {testimonialChunks.map((chunk, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-              <div
-                className="d-flex justify-content-center"
-                style={{ gap: '10px' }}>
+              <div className="d-flex justify-content-evenly flex-wrap">
                 {chunk.map((testimonial, i) => (
                   <div
                     key={i}
                     className="card shadow-sm"
                     style={{
-                      width: '22rem',
-                      borderRadius: '15px',
-                      margin: '0 10px'
+                      width: '30%',
+                      borderRadius: '15px'
                     }}>
                     <div className="card-body">
                       <div className="d-flex align-items-center mb-3">
@@ -117,7 +130,7 @@ export const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="d-flex justify-content-center mt-3">
+        <div className="d-flex justify-content-center gap-5  mt-3">
           <button
             className="btn btn-secondary me-2"
             type="button"

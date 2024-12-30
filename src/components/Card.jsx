@@ -2,10 +2,12 @@ import Rectangle from '../assets/Rectangle.png';
 
 export const Card = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100 mt-5">
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ minHeight: '70vh', minWidthwidth: '100vw' }}>
       <div
         className="card text-white bg-dark border-0"
-        style={{ width: '95%', borderRadius: '40px', marginTop: '40px' }}>
+        style={{ borderRadius: '40px' }}>
         <img src={Rectangle} className="card-img" alt="Background" />
 
         <div className="card-img-overlay d-flex flex-column justify-content-between">
@@ -20,16 +22,16 @@ export const Card = () => {
             </p>
           </div>
           <div
-            className="card p-3 rounded-3 align-self-center mx-auto d-flex justify-content-center align-items-center"
+            className="card p-3 align-self-center mx-auto d-flex justify-content-center align-items-center"
             style={{
               borderRadius: '40px',
-              width: '95%',
+              width: '100%',
               height: '206px',
               background:
                 'linear-gradient(135deg, rgba(128,128,128,0.5), rgba(192,192,192,0.5))',
               backdropFilter: 'blur(2px)',
               border: 'none',
-              marginBottom: '50px'
+              marginBottom: '3%'
             }}>
             <div className="d-flex justify-content-around align-items-center w-100 h-100">
               <img

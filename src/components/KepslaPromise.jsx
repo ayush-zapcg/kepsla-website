@@ -1,125 +1,57 @@
-import KepslaPromise from '../assets/KepslaPromise.png';
 import FutureVideo from '../assets/FutureVideo.png';
 import Improve from '../assets/Improve.png';
 import Track from '../assets/Track.png';
+import styles from '../styles/KepslaPromise.module.css';
 
 export const KeplsaPromise = () => {
   return (
-    <div
-      className="d-flex flex-column justify-content-center align-items-center min-vh-100"
-      style={{
-        backgroundImage: `url(${KepslaPromise})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '95%',
-        borderRadius: '40px',
-        marginTop: '40px',
-        overflow: 'hidden'
-      }}>
-      <h2 className="fw-bold text-center text-white mt-4">
-        Why work with KePSLA?
-      </h2>
-      <div
-        className="d-flex justify-content-between mt-4"
-        style={{
-          width: '90%',
-          borderRadius: '40px',
-          overflow: 'hidden',
-          gap: '20px'
-        }}>
+    <div className={styles.container}>
+      <h2 className={styles.heading}>Why work with KePSLA?</h2>
+      <div className={styles.content}>
         {/* Left Side: video */}
-        <div style={{ flex: 1, position: 'relative' }}>
-          <img
-            src={FutureVideo}
-            alt="Future Video"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              borderRadius: '0 20px 20px 0'
-            }}
-          />
+        <div className={styles.videoContainer}>
+          <img src={FutureVideo} alt="Future Video" className={styles.video} />
         </div>
 
         {/* Right Side: Text */}
-        <div className="p-5" style={{ flex: 2, color: 'white' }}>
-          <div className="text-start">
+        <div className={styles.textContainer}>
+          <div className={styles.textContent}>
             Your Guests journey is unique to your business. We work with you to
-            understand that and then <br></br>build a customized Guest
-            Experience Solution for your business. Our solutions help our
-            customers <br></br>do the following:
-            <ul className="list-unstyled mt-3">
-              <li className="d-flex align-items-center mb-2">
-                <img
-                  src={Improve}
-                  alt="i"
-                  style={{
-                    height: '30px',
-                    width: '30px',
-                    objectFit: 'cover'
-                  }}
-                />
-                <i className="bi bi-check-circle-fill me-2 text-warning"> </i>
+            understand that and then build a customized Guest Experience
+            Solution for your business. Our solutions help our customers do the
+            following:
+            <ul className={styles.list}>
+              <li className={styles.listItem}>
+                <img src={Improve} alt="Improve" className={styles.icon} />
                 Improve direct bookings on your brand website.
               </li>
-              <li className="d-flex align-items-center mb-2">
-                <button
-                  type="button"
-                  className="btn btn-warning rounded-circle"
-                  style={{
-                    height: '30px',
-                    width: '30px'
-                  }}>
-                  <i className="bi bi-play-fill text-dark fs-3"></i>
+              <li className={styles.listItem}>
+                <button type="button" className={styles.iconButton}>
+                  <i className="bi bi-play-fill"></i>
                 </button>
-                <i className="bi bi-check-circle-fill me-2 text-warning"></i>
                 Understand and act on Guest Sentiments in real-time.
               </li>
-              <li className="d-flex align-items-center mb-2">
-                <button
-                  type="button"
-                  className="btn btn-warning rounded-circle"
-                  style={{
-                    height: '30px',
-                    width: '30px'
-                  }}>
-                  <i className="bi bi-play-fill text-dark fs-3"></i>
+              <li className={styles.listItem}>
+                <button type="button" className={styles.iconButton}>
+                  <i className="bi bi-play-fill"></i>
                 </button>
-                <i className="bi bi-check-circle-fill me-2 text-warning"></i>
                 Grow loyalty!
               </li>
-              <li className="d-flex align-items-center mb-2">
-                <button
-                  type="button"
-                  className="btn btn-warning rounded-circle"
-                  style={{
-                    height: '30px',
-                    width: '30px'
-                  }}>
-                  <i className="bi bi-play-fill text-dark fs-3"></i>
+              <li className={styles.listItem}>
+                <button type="button" className={styles.iconButton}>
+                  <i className="bi bi-play-fill"></i>
                 </button>
-                <i className="bi bi-check-circle-fill me-2 text-warning"></i>
                 Get a higher ranking on online travel platforms.
               </li>
-              <li className="d-flex align-items-center mb-2">
-                <img
-                  src={Track}
-                  alt="i"
-                  style={{
-                    height: '30px',
-                    width: '30px',
-                    objectFit: 'cover'
-                  }}
-                />
-                <i className="bi bi-check-circle-fill me-2 text-warning"></i>
+              <li className={styles.listItem}>
+                <img src={Track} alt="Track" className={styles.icon} />
                 Track employee happiness and reduce employee attrition.
               </li>
             </ul>
-            <p className="mt-4">
+            <p className={styles.promiseText}>
               These are not empty promises. We add this to our contract.
-              <br></br>
-              <a href="#" className="text-warning fw-bold">
-                {' '}
+              <br />
+              <a href="#" className={styles.demoLink}>
                 Click here for Demo
               </a>
             </p>

@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../assets/KepslaPromise.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 40px;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+  
+  .heading {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-top: 16px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    width: 90%;
+    border-radius: 40px;
+    overflow: hidden;
+    gap: 20px;
+  }
+  
+  .videoContainer {
+    flex: 1;
+    position: relative;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  .textContainer {
+    flex: 2;
+    color: white;
+    padding: 32px;
+  }
+  
+  .textContent {
+    text-align: start;
+  }
+  
+  .list {
+    list-style: none;
+    margin-top: 16px;
+    padding: 0;
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .icon {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+  
+  .iconButton {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ffc107; /* Bootstrap warning color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-right: 8px;
+  }
+  
+  .iconButton i {
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  .promiseText {
+    margin-top: 16px;
+  }
+  
+  .demoLink {
+    color: #ffc107;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  

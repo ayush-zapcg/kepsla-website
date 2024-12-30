@@ -22,27 +22,25 @@ export const ClientCarousel = () => {
   const cardChunks = chunkArray(cards, 3);
 
   return (
-    <div className="carousel-container">
+    <div className="container-fluid mt-4">
       <div
         id="carouselExample"
         className="carousel slide"
-        data-bs-ride="carousel">
+        data-bs-ride="carousel"
+        style={{ width: '100%' }}>
         <div className="carousel-inner">
           {cardChunks.map((chunk, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-              <div
-                className="d-flex justify-content-center"
-                style={{ gap: '10px' }}>
+              <div className="d-flex justify-content-evenly flex-wrap">
                 {chunk.map((card, i) => (
                   <div
                     key={i}
                     className="card"
                     style={{
-                      width: '22rem',
-                      borderRadius: '26px',
-                      margin: '0 10px'
+                      width: '30%',
+                      borderRadius: '26px'
                     }}>
                     <img
                       src={card.src}
@@ -55,7 +53,7 @@ export const ClientCarousel = () => {
             </div>
           ))}
         </div>
-        <div className="d-flex justify-content-center mt-3">
+        <div className="d-flex justify-content-center gap-5  mt-3">
           <button
             className="btn btn-secondary me-2"
             type="button"
